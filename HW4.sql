@@ -112,9 +112,9 @@ INSERT INTO Collections(name, year_)
 			('1980x', 2003),
 			('Best', 2004),
 			('Hot', 2000),
-			('New', 2006),
-			('Legend', 2005),
-			('Most', 2011);			
+			('New', 2021),
+			('Legend', 2018),
+			('Most', 2019);			
 INSERT INTO	Collections_Tracks
 	VALUES  (1,1),
 			(2,2),
@@ -133,11 +133,24 @@ INSERT INTO	Collections_Tracks
 			(7,16),
 			(8,15);	
 	
+SELECT name, year_ FROM Albums
+		WHERE year_ = 2018;
+
+SELECT name, duration FROM Tracks
+		ORDER BY duration DESC
+		LIMIT 1;
+
+SELECT name FROM Tracks
+		WHERE duration > 210;
 	
+SELECT name FROM Collections
+		WHERE year_ BETWEEN 2018 AND 2020;	
 	
-	
-	
-	
+SELECT name FROM Performers
+		WHERE name NOT LIKE '%% %%';
+		
+SELECT name FROM Tracks
+		WHERE name LIKE '%%My%%';
 	
 	
 	
